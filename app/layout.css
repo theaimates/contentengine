@@ -1,0 +1,203 @@
+.container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 680px;
+    padding: 0 24px;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 64px;
+}
+
+h1 {
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 16px;
+}
+
+.subtitle {
+    font-size: 17px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+/* Input Section */
+.input-section {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 16px;
+}
+
+.input-label {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 12px;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    gap: 12px;
+}
+
+.input-hint {
+    font-size: 12px;
+    color: var(--text-dim);
+    margin-top: 10px;
+    font-family: var(--font-jetbrains-mono), 'JetBrains Mono', monospace;
+}
+
+/* Processing */
+.processing-bar {
+    height: 2px;
+    background: var(--border);
+    border-radius: 1px;
+    margin-top: 16px;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.processing-bar.active {
+    opacity: 1;
+}
+
+/* Output Section */
+.output-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    pointer-events: none;
+    margin-bottom: 80px;
+}
+
+.output-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+}
+
+.output-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.output-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.output-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.output-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.output-name {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.output-meta {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-family: var(--font-jetbrains-mono), 'JetBrains Mono', monospace;
+}
+
+/* Notion CTA */
+.notion-cta {
+    margin-top: 24px;
+    text-align: center;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 40px 0;
+    color: var(--text-dim);
+    font-size: 13px;
+    border-top: 1px solid var(--border);
+    width: 100%;
+    max-width: 680px;
+}
+
+.footer a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer a:hover {
+    color: var(--accent);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .header {
+        margin-top: 48px;
+        margin-bottom: 40px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .subtitle {
+        font-size: 15px;
+    }
+
+    .input-section {
+        padding: 24px;
+    }
+
+    .input-wrapper {
+        flex-direction: column;
+    }
+
+    .submit-btn,
+    .demo-btn {
+        width: 100%;
+    }
+
+    .output-card {
+        padding: 16px 18px;
+    }
+
+    .setup-banner-inner {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .webhook-input {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .viewer-drawer {
+        width: 100vw;
+    }
+}
